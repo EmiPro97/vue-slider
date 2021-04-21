@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Main css link -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- VueJS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+
+    <!-- Icons -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css' integrity='sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==' crossorigin='anonymous'/>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://vuejs.org/images/icons/favicon-32x32.png">
+
+    <!-- Window title -->
+    <title>Vue Sliders</title>
+</head>
+<body>
+    <div id="root">
+        <!-- HEADER -->
+        <h1>Vue Slider</h1>
+
+        <!-- SLIDER -->
+        <section class="slider">
+            <!-- Prev -->
+            <div class="prev">
+                <i class="fas fa-arrow-left"></i>
+            </div>
+
+            <!-- Img-wrapper -->
+            <div class="img-wrapper">
+                <img src="https://picsum.photos/id/237/800/1000" alt="">
+            </div>
+
+            <!-- Next -->
+            <div class="next">
+                <i class="fas fa-arrow-right"></i>
+            </div>
+
+            <div class="nav-dots">
+                <i class="fas fa-circle active"></i>
+            </div>
+        </section>        
+    </div>
+
+    <!-- JS -->
+    <script src="./js/main.js"></script>
+</body>
+</html>
