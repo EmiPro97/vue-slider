@@ -8,6 +8,10 @@ const root = new Vue({
             'https://picsum.photos/id/238/800/1000'
         ],
         indexImges: 0,
+        indexInterval: 0,
+    },
+    created() {
+        this.startLoop();
     },
     methods: {
         prevImg() {
@@ -24,6 +28,14 @@ const root = new Vue({
         },
         setImg(index) {
             this.indexImges = index;
+        },
+        startLoop() {
+            this.indexInterval = setInterval( () => {
+                this.nextImg();
+            }, 3000)
+        },
+        stopLoop() {
+            clearInterval(this.indexInterval);
         },
     },
 });

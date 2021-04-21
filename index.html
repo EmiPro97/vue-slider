@@ -26,7 +26,7 @@
         <h1>Vue Slider</h1>
 
         <!-- SLIDER -->
-        <section class="slider">
+        <section class="slider" @mouseenter="stopLoop" @mouseleave="startLoop">
             <!-- Prev -->
             <div class="prev" @click="prevImg">
                 <i class="fas fa-arrow-left"></i>
