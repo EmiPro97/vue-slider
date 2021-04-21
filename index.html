@@ -18,12 +18,15 @@
     <link rel="icon" type="image/png" href="https://vuejs.org/images/icons/favicon-32x32.png">
 
     <!-- Window title -->
-    <title>Vue Sliders</title>
+    <title>Vuekemon Slider</title>
 </head>
 <body>
     <div id="root">
+
         <!-- HEADER -->
-        <h1>Vue Slider</h1>
+        <header>
+            <img src="./img/logo-pokemon.png" alt="logo">
+        </header>
 
         <!-- SLIDER -->
         <section class="slider" @mouseenter="stopLoop" @mouseleave="startLoop">
@@ -44,12 +47,12 @@
 
             <div class="nav-dots">
                 <i v-for="(img, index) in imges"
-                   class="fas fa-circle"
-                   :class="{active: index == indexImges}"
+                   :class="{pokeball: index == indexImges, 'fas': index != indexImges, 'fa-circle': index != indexImges}"
                    @click="setImg(index)"
                 ></i>
             </div>
-        </section>        
+        </section>    
+
     </div>
 
     <!-- JS -->

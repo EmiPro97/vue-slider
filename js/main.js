@@ -2,10 +2,13 @@ const root = new Vue({
     el: '#root',
     data: {
         imges: [
-            'https://picsum.photos/id/235/800/1000',
-            'https://picsum.photos/id/236/800/1000',
-            'https://picsum.photos/id/237/800/1000',
-            'https://picsum.photos/id/238/800/1000'
+            './img/groudon.jpg',
+            './img/latios.png',
+            './img/birds.jpg',
+            './img/ohoh.jpg',
+            './img/zamazenta.jpg',
+            './img/dogs.jpg',
+            './img/Mewtwo.jpg'
         ],
         indexImges: 0,
         indexInterval: 0,
@@ -32,7 +35,7 @@ const root = new Vue({
         startLoop() {
             this.indexInterval = setInterval( () => {
                 this.nextImg();
-            }, 3000)
+            }, 3500)
         },
         stopLoop() {
             clearInterval(this.indexInterval);
