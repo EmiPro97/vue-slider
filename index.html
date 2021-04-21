@@ -28,22 +28,26 @@
         <!-- SLIDER -->
         <section class="slider">
             <!-- Prev -->
-            <div class="prev">
+            <div class="prev" @click="prevImg">
                 <i class="fas fa-arrow-left"></i>
             </div>
 
             <!-- Img-wrapper -->
             <div class="img-wrapper">
-                <img src="https://picsum.photos/id/237/800/1000" alt="">
+                <img :src="imges[indexImges]" alt="imgs-slider">
             </div>
 
             <!-- Next -->
-            <div class="next">
+            <div class="next" @click="nextImg">
                 <i class="fas fa-arrow-right"></i>
             </div>
 
             <div class="nav-dots">
-                <i class="fas fa-circle active"></i>
+                <i v-for="(img, index) in imges"
+                   class="fas fa-circle"
+                   :class="{active: index == indexImges}"
+                   @click="setImg(index)"
+                ></i>
             </div>
         </section>        
     </div>
