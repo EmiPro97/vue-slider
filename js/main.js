@@ -13,7 +13,7 @@ const root = new Vue({
         indexImges: 0,
         indexInterval: 0,
     },
-    created() {
+    mounted() {
         this.startLoop();
     },
     methods: {
@@ -36,9 +36,11 @@ const root = new Vue({
             this.indexInterval = setInterval( () => {
                 this.nextImg();
             }, 3500)
+            this.$refs.slider.blur();
         },
         stopLoop() {
             clearInterval(this.indexInterval);
+            this.$refs.slider.focus();
         },
     },
 });

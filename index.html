@@ -29,7 +29,14 @@
         </header>
 
         <!-- SLIDER -->
-        <section class="slider" @mouseenter="stopLoop" @mouseleave="startLoop">
+        <section class="slider"
+            @mouseenter="stopLoop" 
+            @mouseleave="startLoop"
+            @keyup.right="nextImg"
+            @keyup.left="prevImg"
+            tabindex="0"
+            ref='slider'
+        >
             <!-- Prev -->
             <div class="prev" @click="prevImg">
                 <i class="fas fa-arrow-left"></i>
